@@ -1,0 +1,145 @@
+* {
+    background-color:#e6e7e8;
+    font-family: "Montserrat", serif;
+    color: #1e459c;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+nav {
+    background-color: #1e459c;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-flex;
+    margin: 0.3em 1em;
+}
+
+section {
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    scroll-snap-align: start;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#aboutme {
+    display: flex;
+    align-items: center;
+    background-color:white;
+}
+
+#projects {
+    flex-direction: column;
+}
+
+#contact {
+    flex-direction: column;
+    background-color: white;
+}
+
+@media (max-width: 600px) {
+    nav ul{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+    }
+
+    img {
+        width: 80%;
+        filter: brightness(90%) contrast(110%);
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    nav {
+        flex-direction: row;
+    }
+
+    img {
+        width: 80%;
+        filter: brightness(90%) contrast(110%);
+    }
+}
+
+@media (min-width: 1025px) {
+    nav ul {
+        display: flex;
+    }
+
+    nav button {
+        display: none;
+    }
+}
+
+/*#abtmeh2 {
+    background-color: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}*/
+
+#cmeh2 {
+    background-color: white;
+}
+
+#pemail {
+    background-color: white;
+}
+
+hgroup h2, hgroup p{
+    background-color: white;
+}
+
+a {
+    background-color: white;
+}
+
+#me {
+    background-color: white;
+}
+
+strong {
+    background-color: white;
+}
+
+em {
+    background-color: white;
+}
+
+abbr {
+    background-color: white;
+}
+button {
+    border-radius: 6px;
+    font-size: 18px;
+    background-color: #1e459c;
+    color: white;
+    border: 1px ;
+}
+
+footer p {
+    text-align: center;
+}
