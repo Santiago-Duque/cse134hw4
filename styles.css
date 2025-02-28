@@ -9,21 +9,41 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    background-color: #1e459c;
+}
+
+h1 {
+    background-color: #1e459c;
+    color: rgb(5, 172, 135);
 }
 
 nav {
-    background-color: #1e459c;
     display: flex;
     justify-content: space-between;
+    background-color: #1e459c;
 }
 
 nav ul {
     list-style-type: none;
+    background-color: #1e459c;
 }
 
 nav ul li {
-    display: inline-flex;
+    display: inline-block;
     margin: 0.3em 1em;
+    background-color: #1e459c;
+}
+
+nav ul li a {
+    display: inline-block;
+    margin: 0.3em 1em;
+    text-decoration: none;
+    background-color: #1e459c;
+    color: white;
+}
+
+nav ul li a:hover {
+    color: rgb(5, 172, 135);
 }
 
 section {
