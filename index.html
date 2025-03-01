@@ -37,11 +37,13 @@
             </section>
 
             <section id = "aboutme">
-                <!--<h2 id = "abtmeh2">About Me</h2>-->
-                <picture>
-                    <img src = "Picofme.png" alt = "Picture of Me">
-                </picture>
-                <p id = "me">Hello there! I am <strong>Santiago Duque</strong>, a motivated computer science student studying at the University of California San Diego. During my free time, I like <em>gaming</em>, going to <abbr title ="BLACKPINK">concerts/festivals</abbr>, and going to amusement parks!</p> 
+                <h2 id = "abtmeh2">About Me:</h2>
+                <div class = "abtcontainer">
+                    <picture>
+                        <img src = "Picofme.png" alt = "Picture of Me">
+                    </picture>
+                    <p id = "me">Hello there! I am <strong>Santiago Duque</strong>, a motivated computer science student studying at the University of California San Diego. During my free time, I like <em>gaming</em>, going to <abbr title ="BLACKPINK">concerts/festivals</abbr>, and going to amusement parks!</p>
+                </div> 
                 <hr>
             </section>
 
@@ -64,21 +66,19 @@
             </section>
 
             <section id = "contact">
-                <hgroup>
-                    <h2>Contact Me</h2>
-                    <p>Email:</p>
-                </hgroup>
-                <address><a href = "mailto:sduque@ucsd.edu">sduque@ucsd.edu</a></address>
-                <form>
+                <h2>Contact Me</h2>
+                <form method = "GET" action = "https://httpbin.org/get">
                     <fieldset>
-                        <legend>Leave your information below!</legend>
-                        <label for = "userName">Name: </label>
-                        <input type = "text" id = "userName" name = "User Name"><br/>
-                        <label for = "email">Email: </label>
-                        <input type = "text" id = "email" name = "User email"><br/>
-                        <!--<label for = "msg">Message: </label><br/>-->
-                        <!--<textarea id = "msg" name = "msg" rows = "8" cols = "27"></textarea>-->
-                        <button>Send</button>
+                        <label for = "name">Name <span class = "req">*</span></label>
+                        <input type = "text" id = "name" name = "name" placeholder="Name" required><br/>
+                        <label for = "email">Email <span class = "req">*</span></label>
+                        <input type = "text" id = "email" name = "email" placeholder="Email" required><br/>
+                        <label for = "message">Message</label>
+                        <textarea id = "msg" name = "msg" rows = "3" cols = "30" placeholder="Message"></textarea>
+                        <input type = "hidden" name = "possible_bot" value = "true">
+                        <output class = "error-message"></output>
+                        <output class = "info-message"></output>
+                        <button type = "submit">Send</button>
                     </fieldset>
                 </form>
             </section>

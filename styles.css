@@ -15,8 +15,13 @@ header {
 h1 {
     background-color: #1e459c;
     color: rgb(5, 172, 135);
+    padding: 0 0 0 10px;
 }
 
+#contact h2 {
+     background-color: white;
+}
+/*Navbar Code*/
 nav {
     display: flex;
     justify-content: space-between;
@@ -54,7 +59,7 @@ section {
     font-size: 2rem;
     scroll-snap-align: start;
 }
-
+/*Home Section Code*/
 #home {
     display: flex;
     flex-direction: column;
@@ -62,20 +67,93 @@ section {
     align-items: center;
     text-align: center;
 }
-
+/*About Me Section Code*/
 #aboutme {
-    display: flex;
-    align-items: center;
+    padding: 50px;
+    text-align: center;
     background-color:white;
 }
 
+#abtmeh2 {
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+#me {
+    background-color: white;
+    line-height: 1.75;
+    max-width: 950px;
+}
+
+.abtcontainer {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.abtcontainer picture img {
+    width: 350px;
+    height: 380px;
+    border-radius: 10%;
+    border: 5px solid #1e459c;
+}
+/*Projects Section Code*/
 #projects {
     flex-direction: column;
 }
-
+/*Contact Me Form Section Code*/
 #contact {
     flex-direction: column;
     background-color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    background-color: white;
+    border: 1px solid #1e459c;
+}
+
+input, textarea {
+    width: 95%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #1e459c;
+    margin-bottom: 15px;
+    background-color: white;
+}
+
+label {
+    background-color: white;
+}
+
+.req {
+    color: red;
+    background-color: white;
+}
+button {
+    width: 98%;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 18px;
+    background-color: #1e459c;
+    color: white;
+    border: 1px ;
+}
+
+button:hover {
+    background-color: rgb(5, 172, 135);
 }
 
 @media (max-width: 600px) {
@@ -112,15 +190,6 @@ section {
     }
 }
 
-/*#abtmeh2 {
-    background-color: white;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    height: 100vh;
-    width: 100%;
-}*/
-
 #cmeh2 {
     background-color: white;
 }
@@ -137,7 +206,11 @@ a {
     background-color: white;
 }
 
-#me {
+li a {
+    font-size: 18px;
+}
+
+picture {
     background-color: white;
 }
 
@@ -151,13 +224,6 @@ em {
 
 abbr {
     background-color: white;
-}
-button {
-    border-radius: 6px;
-    font-size: 18px;
-    background-color: #1e459c;
-    color: white;
-    border: 1px ;
 }
 
 footer p {
