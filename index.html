@@ -71,15 +71,15 @@
                     <fieldset>
                         <label for = "name">Name <span class = "req">*</span></label>
                         <input type = "text" id = "name" name = "name" placeholder="Name" required pattern="[A-Za-z\s]+" minlength="2" maxlength="50">
-                        <span class ="error-name">Only letters are allowed, minimum 2 characters</span>
+                        <output class ="error-name">Only letters are allowed, minimum 2 characters</output>
 
                         <label for = "email">Email <span class = "req">*</span></label>
                         <input type = "email" id = "email" name = "email" placeholder="Email" required>
-                        <span class ="error-email">Enter a valid email address</span>
+                        <output class ="error-email">Enter a valid email address</output>
 
                         <label for = "message">Message <span class = "req">*</span></label>
                         <textarea id = "msg" name = "msg" rows = "3" cols = "30" placeholder="Message" required pattern = "^[a-zA-Z0-9\s.,!?']+$"></textarea>
-                        <span class ="error-message">* Message must be between 10-200 characters, no special symbols.</span>
+                        <output class ="error-message">* Message must be less than 200 characters, no special symbols.</output>
 
                         <input type = "hidden" name = "possible_bot" value = "true">
                         <button type = "submit">Send</button>
@@ -90,6 +90,8 @@
         <footer>
             <p> Santiago created this website using <del>Python</del> <ins>HTML</ins>, CSS, and JavaScript!</p>
         </footer>
+
+        <script src = "script.js"></script>
         <noscript>Your browser does not support JavaScript!</noscript>
     </body>
 </html>

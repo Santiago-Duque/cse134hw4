@@ -156,6 +156,10 @@ button:hover {
     background-color: rgb(5, 172, 135);
 }
 
+span {
+    background-color: white;
+}
+
 output {
     background-color: white;
 }
