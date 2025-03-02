@@ -156,6 +156,40 @@ button:hover {
     background-color: rgb(5, 172, 135);
 }
 
+output {
+    background-color: white;
+}
+
+input:user-valid, textarea:user-valid {
+    border-color: green;
+}
+
+input:user-invalid, textarea:user-invalid {
+    border-color: red;
+}
+
+
+.error-name, .error-email, .error-message {
+    color: red;
+    display: none;
+    font-size: 15px;
+}
+
+input:user-invalid + .error-name {
+    display: block;
+    font-size: 14px;
+}
+
+input:user-invalid + .error-email {
+    display: block;
+    font-size: 14px;
+}
+
+textarea:user-invalid + .error-message {
+    display: block;
+    font-size: 14px;
+}
+
 @media (max-width: 600px) {
     nav ul{
         display: none;
