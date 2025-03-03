@@ -70,19 +70,21 @@
                 <form method = "GET" action = "https://httpbin.org/get">
                     <fieldset>
                         <label for = "name">Name <span class = "req">*</span></label>
-                        <input type = "text" id = "name" name = "name" placeholder="Name" required pattern="[A-Za-z\s]+" minlength="2" maxlength="50">
+                        <input type = "text" id = "name" name = "name" placeholder="Name" required pattern="[A-Za-z\s]+" minlength="2" maxlength="35">
                         
                         <label for = "email">Email <span class = "req">*</span></label>
-                        <input type = "email" id = "email" name = "email" placeholder="Email" required>
+                        <input type = "email" id = "email" name = "email" placeholder="Email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
 
                         <label for = "message">Message <span class = "req">*</span></label>
-                        <textarea id = "msg" name = "msg" rows = "3" cols = "30" placeholder="Message" required pattern = "^[a-zA-Z0-9\s.,!?']+$"></textarea>
+                        <textarea id = "msg" name = "msg" rows = "3" cols = "30" placeholder="Message" required minlength="1" maxlength="100"></textarea>
 
                         <input type = "hidden" name = "possible_bot" value = "true">
                         <button type = "submit" id = "check">Send</button>
 
-                        <output class ="error-message">Error</output>
-                        <output class = "info-message"></output>
+                        <output id ="error-name"></output>
+                        <output id ="error-email"></output>
+                        <output id ="error-msg"></output>
+                        <output id = "info-message"></output>
                         
                         <p id = "log"></p>
                     </fieldset>
