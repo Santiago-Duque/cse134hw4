@@ -60,14 +60,20 @@ document.addEventListener("DOMContentLoaded", (e) => {
         }
         
         else {
-            errormsg.textContent = "Sorry, That Character Isn't Allowed";
-            inputmsg.value = inputmsg.value.slice(0, -1);
-            errormsg.style.color = "red";
-            inputmsg.style.border = "10px solid red";
-            setTimeout(() => {
+            if (inputmsg.value.length == 0) {
                 errormsg.textContent = "";
-                inputmsg.style.border = "1px solid #1e459c";
-            }, 2000);
+            }
+
+            else {
+                errormsg.textContent = "Sorry, That Character Isn't Allowed";
+                inputmsg.value = inputmsg.value.slice(0, -1);
+                errormsg.style.color = "red";
+                inputmsg.style.border = "10px solid red";
+                setTimeout(() => {
+                    errormsg.textContent = "";
+                    inputmsg.style.border = "1px solid #1e459c";
+                }, 2000);
+            }
         }
     });
 
@@ -77,13 +83,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
         infomsg.textContent = `${remainingchars} chars remaining`;
 
-        if (inputmsg.value.length == 0) {
-            errormsg.textContent = "";
-            infomsg.textContent = "";
-            inputmsg.style.border = "1px solid #1e459c";
-        }
-
-        if (remainingchars < 100 && remainingchars > 66) {
+        if (remainingchars <= 100 && remainingchars > 66) {
             infomsg.style.color = "green";
         }
 
