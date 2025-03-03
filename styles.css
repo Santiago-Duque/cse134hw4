@@ -173,20 +173,15 @@ input:user-invalid, textarea:user-invalid {
 }
 
 
-.error-name, .error-email, .error-message {
+.error-message {
     color: red;
     display: none;
     font-size: 15px;
 }
 
-input:user-invalid + .error-name {
+input:user-invalid + .error-message {
     display: block;
-    font-size: 14px;
-}
-
-input:user-invalid + .error-email {
-    display: block;
-    font-size: 14px;
+    font-size: 14;
 }
 
 textarea:user-invalid + .error-message {
