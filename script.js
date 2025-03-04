@@ -97,4 +97,25 @@ document.addEventListener("DOMContentLoaded", (e) => {
         }
     });
 
+    const themeToggle = document.createElement("button");
+    themeToggle.classList.add("theme-toggle");
+    document.body.appendChild(themeToggle);
+
+
+    const currentTheme = localStorage.getItem("theme") || "light";
+    document.documentElement.setAttribute("data-theme", currentTheme);
+    themeToggle.innerHTML = currentTheme === "dark" ? "🌙" : "☀️";
+
+
+    document.body.setAttribute("data-theme", currentTheme);
+
+    themeToggle.addEventListener("click", () => {
+        const newTheme = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme);
+        themeToggle.innerHTML = newTheme === "dark" ? "🌙" : "☀️";
+
+        document.body.setAttribute("data-theme", newTheme);
+    });
+
 });
